@@ -7,7 +7,7 @@ def safeExtGet(prop, fallback) {
 def DEFAULT_COMPILE_SDK_VERSION   = 27
 def DEFAULT_TARGET_SDK_VERSION    = 27
 def DEFAULT_MIN_SDK_VERSION       = 16
-def GLIDE_VERSION = safeExtGet("glideVersion", "4.11.0")
+def GLIDE_VERSION = "4.9.0" //safeExtGet("glideVersion", "4.11.0")
 def PICTURE_VERSION = safeExtGet("pictureVersion", "2.5.6")
 
 android {
@@ -32,4 +32,6 @@ dependencies {
     implementation 'com.facebook.react:react-native:+'
     implementation "com.github.LuckSiege.PictureSelector:picture_library:${PICTURE_VERSION}"
     implementation "com.github.bumptech.glide:glide:${GLIDE_VERSION}"
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
 }
